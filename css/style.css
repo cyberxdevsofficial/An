@@ -1,267 +1,210 @@
 /* Fonts & Reset */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
 }
 
 /* Header */
 header {
-    background: #0066cc;
-    color: #fff;
-    padding: 15px 20px;
+  background: linear-gradient(90deg, #0066cc, #00aaff);
+  color: #fff;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.8em;
-    margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
 }
 
 nav {
-    position: relative;
+  position: relative;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .nav-links li a:hover {
-    text-decoration: underline;
+  color: #ffd700;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
 .hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-    background: url('../images/hero-bg.jpg') center/cover no-repeat;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    animation: fadeIn 1.5s ease-in;
+  height: 80vh;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-content h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+  font-size: 3em;
+  color: #fff;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+  font-size: 1.2em;
+  margin: 15px 0;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
 .btn {
-    padding: 12px 25px;
-    background-color: #ff6600;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+  padding: 12px 25px;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #e65c00;
-}
-
-/* Sections */
-.section-title {
-    text-align: center;
-    font-size: 2em;
-    margin: 40px 0 20px;
+  background-color: #e65c00;
 }
 
 /* Feature Cards */
 .features .feature-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
-.feature-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+.feature-card, .service-card, .testimonial-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  flex: 1 1 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.feature-card:hover, .service-card:hover, .testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .btn-small {
-    display: inline-block;
-    padding: 8px 15px;
-    margin-top: 10px;
-    background-color: #0066cc;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-small:hover {
-    background-color: #004999;
-}
-
-/* Services */
-.services .service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.service-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Testimonials */
-.testimonials .testimonial-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.testimonial-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 300px;
-    text-align: center;
-    font-style: italic;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Newsletter */
-.newsletter {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.newsletter input[type="email"] {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-.newsletter button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #ff6600;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.newsletter button:hover {
-    background-color: #e65c00;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+  background: #004999;
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Services */
+.services, .testimonials, .newsletter {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Newsletter */
+.newsletter input[type="email"] {
+  padding: 12px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  background: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #e65c00;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #0066cc;
-        flex-direction: column;
-        width: 200px;
-        display: none;
-        border-radius: 0 0 10px 10px;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .features .feature-container,
-    .services .service-container,
-    .testimonials .testimonial-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero-content h2 {
-        font-size: 2em;
-    }
+@media(max-width:768px){
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(90deg, #0066cc, #00aaff);
+    width: 200px;
+    display: none;
+    border-radius: 0 0 15px 15px;
+  }
+  .nav-links.active { display: flex;}
+  .hamburger { display: flex; }
+  .features .feature-container, .service-container, .testimonial-container {
+    flex-direction: column;
+  }
 }
